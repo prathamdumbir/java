@@ -1,0 +1,112 @@
+
+Frame
+
+import java.awt.*;
+
+class First extends Frame{
+First(){
+
+setSize(300, 300);
+setVisible(true);
+
+}
+public static void main(String args[]){
+
+First f=new Firsti();
+
+i
+Frame Closing
+import java.awt.event.*;
+public class AdapterExample extends WindowAdapter{
+Frame f;
+AdapterExample(){
+f=new Frame();
+f.addWindowListener(this);
+f.setSize(400,400);
+f.setLayout(null);
+f.setVisible(true);
+}
+public void windowClosing(WindowEvent e) {
+f.dispose();
+}
+public static void main(String[] args) {
+
+new AdapterExample();
+i
+
+Button
+
+import java.awt.*;
+
+class First1 extends Frame{
+
+First1(){
+
+Button b=new Button("click me");
+b.setBounds(30,100,80,30);// setting button position
+add(b);//adding button into frame
+setSize(300,300);//frame size 300 width and 300 height
+setLayout(null);//no layout manager
+setVisible(true);//now frame will be visible, by default not visible
+}
+
+public static void main(String args[]){
+
+First1 f=new First1();
+i
+
+CheckBox
+import java.awt.*;
+public class CheckboxExample
+{
+CheckboxExample(){
+Frame f= new Frame("Checkbox Example");
+
+Checkbox checkbox1 = new Checkbox("C++");
+checkbox1.setBounds(100,100, 50,50);
+
+Checkbox checkbox2 = new Checkbox("Java", true);
+checkbox2.setBounds(100,150, 50,50);
+f.add(checkbox1);
+
+f.add(checkbox2);
+
+f.setSize(400,400);
+
+f.setLayout(null);
+
+f.setVisible(true);
+
+}
+
+public static void main(String args|[])
+
+{
+
+new CheckboxExample();
+
+i
+
+Choiceexample
+import java.awt.*;
+public class ChoiceExample
+
+{
+
+public static void main(String args[])
+{
+
+Frame f=new Frame();
+
+Choice obj=new Choice();
+obj.setBounds(50,100,50,50);
+obj.add("1");
+obj.add("2");
+obj.add("3");
+obj.add("4");
+f.add(obj);
+f.setSize(500,500);
+f.setLayout(null);
+
+f.setVisible(true);
+i}
