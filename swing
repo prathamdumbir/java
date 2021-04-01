@@ -1,22 +1,230 @@
+  1) JButton class
+  
+    import java.awt.*;  
+public class buttonexample {  
+public static void main(String[] args) {  
+    Frame f=new Frame("Button Example");  
+    Button b=new Button("Click Here");  
+    b.setBounds(80,100,80,30);  
+    f.add(b);  
+    f.setSize(400,400);  
+    f.setLayout(null);  
+    f.setVisible(true);   
+}  
+}  
 
 
-    JButton class
-    JRadioButton class
-    JTextArea class
-    JComboBox class
-    JTable class
-    JColorChooser class
-    JProgressBar class
-    JSlider class
+    2)JRadioButton class
     
-    Graphics in swing
-    Displaying image
+    import java.awt.*;    
+public class CheckboxGroupExample    
+{    
+       CheckboxGroupExample(){    
+       Frame f= new Frame("CheckboxGroup Example");    
+        CheckboxGroup cbg = new CheckboxGroup();  
+        Checkbox checkBox1 = new Checkbox("C++", cbg, false);    
+        checkBox1.setBounds(100,100, 50,50);    
+        Checkbox checkBox2 = new Checkbox("Java", cbg, true);    
+        checkBox2.setBounds(100,150, 50,50);    
+        f.add(checkBox1);    
+        f.add(checkBox2);    
+        f.setSize(400,400);    
+        f.setLayout(null);    
+        f.setVisible(true);    
+     }    
+public static void main(String args[])    
+{    
+    new CheckboxGroupExample();    
+}    
+} 
     
-    OpenDialog Box
+    3)JTextArea class
+    
+    import java.awt.*;  
+public class TextAreaExample  
+{  
+     TextAreaExample(){  
+        Frame f= new Frame();  
+            TextArea area=new TextArea("Welcome");  
+        area.setBounds(10,30, 300,300);  
+        f.add(area);  
+        f.setSize(400,400);  
+        f.setLayout(null);  
+        f.setVisible(true);  
+     }  
+public static void main(String args[])  
+{  
+   new TextAreaExample();  
+}  
+} 
    
+   
+   4)jtextfield 
+   
+    import java.awt.*;  
+class TextFieldExample{  
+public static void main(String args[]){  
+    Frame f= new Frame("TextField Example");  
+    TextField t1,t2;  
+    t1=new TextField("my text area ");  
+    t1.setBounds(50,100, 200,30);  
+    t2=new TextFie("pratham dumbir");  
+    t2.setBounds(50,150, 200,30);  
+    f.add(t1); f.add(t2);  
+    f.setSize(400,400);  
+    f.setLayout(null);  
+    f.setVisible(true);  
+}  
+}  
+   5) dilogbox
+   
+    import java.awt.*;  
+import java.awt.event.*;  
+public class DialogExample {  
+    private static Dialog d;  
+    DialogExample() {  
+        Frame f= new Frame();  
+        d = new Dialog(f , "Dialog Example", true);  
+        d.setLayout( new FlowLayout() );  
+        Button b = new Button ("OK");  
+        b.addActionListener ( new ActionListener()  
+        {  
+            public void actionPerformed( ActionEvent e )  
+            {  
+                DialogExample.d.setVisible(false);  
+            }  
+        });  
+        d.add( new Label ("Click button to continue."));  
+        d.add(b);   
+        d.setSize(300,300);    
+        d.setVisible(true);  
+    }  
+    public static void main(String args[])  
+    {  
+        new DialogExample();  
+    }  
+}
+    6)Jscrollbar class
     
-    BorderLayout
-    GridLayout
-    FlowLayout
-    CardLayout
+   import java.awt.*;  
+class ScrollbarExample{  
+ScrollbarExample(){  
+            Frame f= new Frame("Scrollbar Example");  
+            Scrollbar s=new Scrollbar();  
+            s.setBounds(100,100, 50,100);  
+            f.add(s);  
+            f.setSize(400,400);  
+            f.setLayout(null);  
+            f.setVisible(true);  
+}  
+public static void main(String args[]){  
+       new ScrollbarExample();  
+}  
+}  
+    7) j checkobx
+    import java.awt.*;  
+public class CheckboxExample  
+{  
+     CheckboxExample(){  
+       Frame f= new Frame("Checkbox Example");  
+        Checkbox checkbox1 = new Checkbox("C++");  
+        checkbox1.setBounds(100,100, 50,50);  
+        Checkbox checkbox2 = new Checkbox("Java", true);  
+        checkbox2.setBounds(100,150, 50,50);  
+        f.add(checkbox1);  
+        f.add(checkbox2);  
+        f.setSize(400,400);  
+        f.setLayout(null);  
+        f.setVisible(true);  
+     }  
+public static void main(String args[])  
+{  
+    new CheckboxExample();  
+}  
+}  
 
+8) jlist
+
+import java.awt.*;  
+public class ListExample  
+{  
+     ListExample(){  
+        Frame f= new Frame();  
+        List l1=new List(5);  
+        l1.setBounds(100,100, 75,75);  
+        l1.add("Item 1");  
+        l1.add("Item 2");  
+        l1.add("Item 3");  
+        l1.add("Item 4");  
+        l1.add("Item 5");  
+        f.add(l1);  
+        f.setSize(400,400);  
+        f.setLayout(null);  
+        f.setVisible(true);  
+     }  
+public static void main(String args[])  
+{  
+   new ListExample();  
+}  
+}  
+   
+   
+ 9)OpenDialog Box
+ 
+ import java.awt.*;  
+import java.awt.event.*;  
+public class DialogExample {  
+    private static Dialog d;  
+    DialogExample() {  
+        Frame f= new Frame();  
+        d = new Dialog(f , "Dialog Example", true);  
+        d.setLayout( new FlowLayout() );  
+        Button b = new Button ("OK");  
+        b.addActionListener ( new ActionListener()  
+        {  
+            public void actionPerformed( ActionEvent e )  
+            {  
+                DialogExample.d.setVisible(false);  
+            }  
+        });  
+        d.add( new Label ("Click button to continue."));  
+        d.add(b);   
+        d.setSize(300,300);    
+        d.setVisible(true);  
+    }  
+    public static void main(String args[])  
+    {  
+        new DialogExample();  
+    }  
+}  
+   10)canvas
+   
+   import java.awt.*;  
+public class CanvasExample  
+{  
+  public CanvasExample()  
+  {  
+    Frame f= new Frame("Canvas Example");  
+    f.add(new MyCanvas());  
+    f.setLayout(null);  
+    f.setSize(400, 400);  
+    f.setVisible(true);  
+  }  
+  public static void main(String args[])  
+  {  
+    new CanvasExample();  
+  }  
+}  
+class MyCanvas extends Canvas  
+{  
+        public MyCanvas() {  
+        setBackground (Color.GRAY);  
+        setSize(300, 200);  
+     }  
+  public void paint(Graphics g)  
+  {  
+    g.setColor(Color.red);  
+    g.fillOval(75, 75, 150, 75);  
+  }  
+}    
+   
